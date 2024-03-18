@@ -1,3 +1,42 @@
-<header>
-    Aquí va el cuadro de texto
+---
+import Button from "../components/Button.tsx"
+import HeaderLink from "../components/HeaderLink.astro"
+import Logo from "../components/Logo.astro"
+import MenuIcon from "../components/icons/Menu.astro"
+import CloseIcon from "../components/icons/Close.astro"
+
+const { currentLocale } = Astro
+---
+
+<header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
+	<div class="max-w-7xl mx-auto flex items-center justify-between gap-16 flex-row">			
+		<h1 class="text-white font-bold text-4xl">
+			AMBeR	
+		</h1>
+	    <nav
+		id="header-menu"
+			class="fixed w-full h-dvh inset-0 bg-[#e7bcb876] md:text-xl lg:text-xl flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial] text-white"
+		>
+	        <HeaderLink class="text__glowing text-white" href='/pon/'>
+	        	Inicio
+	        </HeaderLink>
+	        
+			<HeaderLink class="text__glowing text-white" href='/el/'>
+	        	Sobre Nosotros
+	        </HeaderLink>
+			
+			<HeaderLink class="text__glowing text-white" href='/link/'>
+				Contacto
+			</HeaderLink>
+
+	      	<Button className="md:py-2 md:ml-auto text-white md:text-base lg:text-base" url="#">
+				COMPRAR<!-- poner  el link del whatsapp-->
+	      	</Button>
+
+        	<a href="#header-nav" class="md:hidden absolute top-6 right-6">
+        		<CloseIcon />
+            </a>
+        </nav>
+        <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+      </div>
 </header>

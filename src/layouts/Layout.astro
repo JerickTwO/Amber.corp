@@ -1,4 +1,6 @@
 ---
+import '@fontsource/poppins';
+import '@fontsource-variable/playfair-display';
 interface Props {
 	title: string;
 	description: string;
@@ -23,12 +25,17 @@ const { description, title } = Astro.props;
 </html>
 <style is:global>
 	:root {
-		color-scheme: dark;
+		color-scheme: light;
+	}
+	*{
+		box-sizing: border-box;
+		border: 0;
 	}
 	html {
-		font-family: system-ui, sans-serif;
-		background: #13151a;
-
+		font-family: 'Poppins', sans-serif;
+	}
+	.other-font{
+		font-family: 'Playfair Display Variable', serif;
 	}
 
 </style>

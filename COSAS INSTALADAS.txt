@@ -1,2 +1,4 @@
-tailwind
+tailwind 
+npx astro add tailwind
 tailwind animated
+preact npx astro add preact
