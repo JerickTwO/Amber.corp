@@ -1,0 +1,133 @@
+---
+const PRODUCTOS = [
+    {
+        title:"Cadena Amber",
+        image:"../../public/img/7.webp",
+        price:"80",
+        description:"Cadena de plata",
+    },
+    {
+        title:"Cadena Amber",
+        image:"../../public/img/7.webp",
+        price:"80",
+        description:"Cadena de plata",
+    },
+    {
+        title:"Cadena Amber",
+        image:"../../public/img/7.webp",
+        price:"80",
+        description:"Cadena de plata",
+    },
+    {
+        title:"Cadena Amber",
+        image:"../../public/img/7.webp",
+        price:"80",
+        description:"Cadena de plata",
+    },
+    {
+        title:"Cadena Amber",
+        image:"../../public/img/7.webp",
+        price:"80",
+        description:"Cadena de plata",
+    },
+]
+---
+<div class="body">
+    <h2 class="other-font text-3xl tablet:text-4xl laptop:text-6xl">COMPRA AHORA	</h2>
+    <article>
+        <p>
+            Lorem ipsum dolor sit 
+            onsectetur, adipielit.
+        </p>
+    </article>
+    <div class="container-items">
+        {
+        PRODUCTOS.map(({image, title, price, description, }) => (
+        <div class="item">
+            <figure>
+                <img
+                    src={image}
+                    alt={description}
+                />
+            </figure>
+            <div class="info-product">
+                <h2>{title}</h2>
+                <p class="price">${price}</p>
+                <button class="btn-add-cart"
+                >COMPRAR</button>
+            </div>
+        </div>
+            ))
+        }
+    </div>
+</div>
+<style>
+    .body{
+        margin: 0 auto;
+        max-width: 1100px;
+        color: #333;
+    }
+
+    .icon-cart{
+        width: 40px;
+        height: 40px;
+        stroke: #000;
+    }
+
+    .icon-cart:hover{
+        cursor: pointer;
+    }
+
+    img{
+        max-width: 100%;
+    }
+
+    /* Main */
+    .container-items{
+        display: grid;
+        grid-template-columns: repeat(auto-fit,minmax(275px, 1fr));
+        gap: 40px;
+        margin: 40px;
+    }
+
+    .item{
+        border-radius: 10px;
+        margin: 60px 0;
+    }
+
+    .item:hover{
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
+    }
+
+    .item img{
+        width: 100%;
+        height: 300px;
+        object-fit: cover;
+        border-radius: 10px 10px 0 0;
+        transition: all .5s;
+    }
+
+    .item figure{
+        overflow: hidden;
+    }
+
+    .item:hover img{
+        transform: scale(1.2);
+    }
+    .info-product{
+        padding: 15px 30px;
+        line-height: 2;     
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+    }
+    .info-product button{
+        border: none;
+        background: none;
+        background-color: #000;
+        color: #fff;
+        padding: 15px 10px;
+        cursor: pointer;
+    }
+
+</style>
