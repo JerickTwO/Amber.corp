@@ -7,6 +7,7 @@ import Bento from '../components/Bento.astro';
 import Hr from '../components/Hr.astro';
 import AboutMe from '../components/AboutMe.astro';
 import Products from '../components/Products.astro';
+import Contact from '../components/Contact.astro';
 ---
 
 <Layout 
@@ -19,12 +20,16 @@ import Products from '../components/Products.astro';
 		src="../../public/img/r1.jpg" 
 		alt="Imagen de modelo"
 	>
-	<main class="w-[320px] movil-l:w-[425px] tablet:w-[700px] laptop:w-[1024px]">
+	<main >
 		<Header_image />
 		<Hr />
 		<Hero />
 		<Hr />
 		<Products />
+		<Hr />
+		<Contact />
+		<Hr />
+
 		<!-- <AboutMe /> -->
 	</main>
 </Layout>
