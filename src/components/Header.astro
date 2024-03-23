@@ -8,14 +8,15 @@ import CloseIcon from "../components/icons/Close.astro"
 const { currentLocale } = Astro
 ---
 
-<header id="header-nav" class="fixed top-0 w-full px-6 py-4 z-50">
-	<div class="max-w-7xl mx-auto flex items-center justify-between gap-16 flex-row">			
+<header id="header-nav" class="header-nav fixed top-0 w-full px-6 py-4 z-50">
+	<div class="flex max-w-7xl mx-auto justify-between gap-16 ">			
 		<h1 class="text-white font-bold text-4xl">
 			AMBeR	
 		</h1>
 	    <nav
 		id="header-menu"
-			class="fixed w-full h-dvh inset-0 bg-[#e7bcb8e0] md:text-xl lg:text-[60px] flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 md:static md:h-[initial] md:bg-[initial] md:flex-row md:translate-y-[initial] text-white "
+			class="fixed 
+			  h-dvh inset-0 bg-[#e7bcb8e0] text-xl laptop:text-[60px] flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 laptop:static laptop:h-[initial] laptop:bg-[initial] laptop:flex-row laptop:translate-y-[initial] text-white "
 		>
 	        <HeaderLink class="text-[20px]" href='/pon/'>
 	        	Inicio
@@ -29,14 +30,15 @@ const { currentLocale } = Astro
 				Contacto
 			</HeaderLink>
 
-	      	<Button className=" text-[20px] md:py-2 md:ml-auto text-white md:text-base lg:text-base" url="#">
+	      	<Button className=" laptop:hidden text-[20px] laptop:py-2 laptop:ml-auto text-white laptop:text-base lg:text-base" url="#">
 				COMPRAR<!-- poner  el link del whatsapp-->
 	      	</Button>
 
-        	<a href="#header-nav" class="md:hidden absolute top-6 right-6">
+        	<a href="#header-nav" class="laptop:hidden absolute top-6 right-6">
         		<CloseIcon />
             </a>
         </nav>
-        <a href="#header-menu" class="md:hidden"><MenuIcon /></a>
+        <a href="#header-menu" class="laptop:hidden"><MenuIcon /></a>
       </div>
 </header>
+

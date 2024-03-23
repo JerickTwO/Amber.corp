@@ -28,13 +28,15 @@ const PRODUCTOS = [
 ]
 ---
 <div>
-    <article class="mx-12">
-        <h2 class="p-2 other-font text-2xl tablet:text-4xl laptop:text-6xl">COMPRA AHORA</h2>
-        <p class="p-2">
+
+    <article class="mx-auto max-w-[1175px]">
+        <h2 class="mx-auto other-font text-2xl tablet:text-4xl laptop:text-6xl ">COMPRA AHORA</h2>
+        <p class="p-2 ">
             Lorem ipsum dolor sit 
             onsectetur, adipielit.
         </p>
     </article>
+    <hr class="mx-auto my-6 bg-zinc-900  max-w-[0px] laptop:max-w-[1200px] h-px">
     <div class="container-items">
         {
         PRODUCTOS.map(({image, title, price, description, }) => (
@@ -62,11 +64,15 @@ const PRODUCTOS = [
         display: grid;
         grid-template-columns: repeat(auto-fit,minmax(240px, 1fr));
         gap: 30px;
-        margin: 50px;
+        max-width: 1200px;
+        margin: 40px auto;
+        padding: 20px;
     }
     .item{
+        max-width:347px ;
         border-radius: 10px;
         margin: 30px 0;
+        
     }
     .item:hover{
         box-shadow: 0 10px 20px rgba(0, 0, 0, 0.20);
