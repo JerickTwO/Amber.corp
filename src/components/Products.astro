@@ -4,7 +4,7 @@ const PRODUCTOS = [
         title:"Cadena Amber",
         image:"../../public/img/9.webp",
         price:"80",
-        description:"Anillo de Diamante",
+        description:"Collar de Diamante",
     },
     {
         title:"Cadena Amber",
@@ -24,7 +24,6 @@ const PRODUCTOS = [
         price:"80",
         description:"Anillo de Diamante",
     },
-
 ]
 ---
 <div>
@@ -43,7 +42,7 @@ const PRODUCTOS = [
         <div class="item">
             <figure>
                 <img
-                    src={image}
+                    src={image}     
                     alt={description}
                 />
             </figure>
@@ -87,7 +86,6 @@ const PRODUCTOS = [
     .item figure{
         overflow: hidden;
     }
-
     .item:hover img{
         transform: scale(1.2);
     }
