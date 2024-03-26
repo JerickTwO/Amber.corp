@@ -8,16 +8,19 @@ import CloseIcon from "../components/icons/Close.astro"
 const { currentLocale } = Astro
 ---
 
-<header id="header-nav" class="header-nav fixed top-0 w-full px-6 py-4 z-50">
-	<div class="flex max-w-7xl mx-auto justify-between gap-16 ">			
-		<h1 class="text-white font-bold text-4xl">
+<header class="down-nav  fixed top-0 w-full px-6 py-4 z-50">
+	<div class=" flex max-w-7xl mx-auto justify-between gap-16 ">			
+		<h1 class="down-color text-white font-bold text-4xl">
 			AMBeR	
 		</h1>
 	    <nav
 		id="header-menu"
-			class="fixed 
-			  h-dvh inset-0 bg-[#e7bcb8e0] text-xl laptop:text-[60px] flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 laptop:static laptop:h-[initial] laptop:bg-[initial] laptop:flex-row laptop:translate-y-[initial] text-white "
+			class="fixed down-color
+			  h-dvh inset-0 bg-[#e7bcb8e0] text-xl  flex flex-col items-center justify-center gap-8 -translate-y-full transition-transform duration-300 target:translate-y-0 
+			  
+			  laptop:text-[60px] laptop:static laptop:h-[initial] laptop:bg-[initial] laptop:flex-row laptop:translate-y-[initial] text-white "
 		>
+		<!-- aqui -->
 	        <HeaderLink class="text-[20px]" href='/pon/'>
 	        	Inicio
 	        </HeaderLink>
@@ -30,23 +33,42 @@ const { currentLocale } = Astro
 				Contacto
 			</HeaderLink>
 
-	      	<Button className=" laptop:hidden text-[20px] laptop:py-2 laptop:ml-auto text-white laptop:text-base lg:text-base" url="#">
+	      	<Button className="text-xl laptop:hidden text-[20px] laptop:py-2 laptop:ml-auto text-white laptop:text-base " url="#">
 				COMPRAR<!-- poner  el link del whatsapp-->
 	      	</Button>
 
-        	<a href="#header-nav" class="laptop:hidden absolute top-6 right-6">
+        	<a href="#header-nav" class=" laptop:hidden absolute top-6 right-6">
         		<CloseIcon />
             </a>
         </nav>
-        <a href="#header-menu" class="laptop:hidden"><MenuIcon /></a>
+        <a href="#header-menu"
+		class="down-color text-white laptop:hidden"><MenuIcon  /></a>
       </div>
 </header>
 <style>
-	.header-nav{
-		background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
-		backdrop-filter: blur(10px);
-		border-radius: 20px;
-		border: 1px solid rgba(255, 255, 255, 0.1;)
+	.down-nav{
+		animation: navbar linear both;
+		animation-timeline: scroll(root );
+		/* DE 0 A 200 PX DE SCROLL  */
+		animation-range: 0 700px;
+	}
+	.down-color{
+		animation: coloring linear both;
+		animation-timeline: scroll(root );
+		/* DE 0 A 200 PX DE SCROLL  */
+		animation-range: 0 700px;
+	}
+	@keyframes navbar{
+		to{
+			background-color: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+			backdrop-filter: blur(10px);
+			border-radius: 0 0 20px 0;
+		}
+	}
+	@keyframes coloring{
+		to{
+			color: #000;
+		}
 	}
 </style>
 

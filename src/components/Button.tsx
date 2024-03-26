@@ -1,3 +1,4 @@
+
 import styles from "../components/styles/Button.module.css"
 
 interface Props {
@@ -18,10 +19,7 @@ export default function Button({ children, onClick,url, target, className,  }:Pr
   rel="noopener noreferrer"
   onClick={onClick}
   class={`
-  lg:text-2xl
-  md:px-5
-  md:text-xl
-  text-xs
+
   w-fit
   font-medium
   no-underline
